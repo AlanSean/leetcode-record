@@ -1,11 +1,13 @@
-# leetcode-record
+[TOC]
 
-[237.删除链表中的节点](https://github.com/AlanSean/leetcode-record/blob/master/237.删除链表中的节点/index.html)
+# 数组
 
-[26.删除排序数组中的重复项](https://github.com/AlanSean/leetcode-record/blob/master/26.删除排序数组中的重复项/index.html)
+[两数之和](https://github.com/AlanSean/leetcode-record/blob/master/数组/两数之和.md)
 
-[27.移除元素](https://github.com/AlanSean/leetcode-record/blob/master/27.移除元素/index.html)
+[删除排序数组中的重复项](https://github.com/AlanSean/leetcode-record/blob/master/数组/删除排序数组中的重复项.md)
 
+[移除元素](https://github.com/AlanSean/leetcode-record/blob/master/数组/移除元素.md)
 
-[宝石与石头](https://github.com/AlanSean/leetcode-record/blob/master/宝石与石头/index.html)
+# 链表
 
+[宝石与石头](https://github.com/AlanSean/leetcode-record/blob/master/链表/237.删除链表中的节点.md)
