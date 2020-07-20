@@ -1,0 +1,24 @@
+{
+  "name": "leetcode-record",
+  "version": "1.0.0",
+  "description": "* [数组](#数组)\r * [链表](#链表)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlanSean/leetcode-record.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlanSean/leetcode-record/issues"
+  },
+  "homepage": "https://github.com/AlanSean/leetcode-record#readme",
+  "dependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "run-sequence": "^2.2.1"
+  }
+}
