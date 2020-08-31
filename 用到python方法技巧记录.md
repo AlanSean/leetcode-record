@@ -1,8 +1,14 @@
-# pyhton用到的方法和技巧
+### pyhton用到的方法和技巧
 
-1. 无穷小 float("-inf")
-2. 无穷大 float("inf")
-3. 获取list的长度 len(list)
-4. 获取 tuple或者list中的最大值 max(tuple) max(list)
 
- 
+
+[TOC]
+
+#### 无穷小 `float("-inf")`
+#### 无穷大 `float("inf")`
+#### 获取list的长度 `len(list)`
+#### 获取 `tuple`或者`list`中的最大值 `max(tuple) max(list) `
+#### `not` 逻辑非操作` not head`
+#### `is` 判断是否为某个类的实例` head is Node`
+#### 关键字含义
+ ![关键字](https://images2018.cnblogs.com/blog/1271484/201809/1271484-20180912105808480-1229914964.png)
