@@ -1,24 +1,52 @@
 {
-  "name": "leetcode-record",
-  "version": "1.0.0",
-  "description": "* [数组](#数组)\r * [链表](#链表)",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/AlanSean/leetcode-record.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/AlanSean/leetcode-record/issues"
-  },
-  "homepage": "https://github.com/AlanSean/leetcode-record#readme",
-  "dependencies": {
-    "browser-sync": "^2.26.7",
-    "gulp": "^4.0.2",
-    "run-sequence": "^2.2.1"
-  }
+	"name": "leetcode-record",
+	"version": "1.0.0",
+	"description": "* [数组](#数组)\r * [链表](#链表)",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/AlanSean/leetcode-record.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/AlanSean/leetcode-record/issues"
+	},
+	"homepage": "https://github.com/AlanSean/leetcode-record#readme",
+	"dependencies": {
+		"browser-sync": "^2.26.7",
+		"gulp": "^4.0.2",
+		"run-sequence": "^2.2.1"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged",
+			"commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+		}
+	},
+	"config": {
+		"commitizen": {
+			"path": "cz-customizable"
+		}
+	},
+	"lint-staged": {
+		"*.{ts,tsx}": [
+			"tslint --fix",
+			"git add"
+		],
+		"*.{js,jsx}": [
+			"eslint --fix",
+			"git add"
+		]
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^9.1.2",
+		"@commitlint/config-conventional": "^9.1.2",
+		"babel-eslint": "^10.1.0",
+		"husky": "^4.2.5",
+		"lint-staged": "^10.2.13"
+	}
 }
