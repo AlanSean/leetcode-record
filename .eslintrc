@@ -1,5 +1,10 @@
 {
 	"parser":"babel-eslint",
+	"env": {
+		"es6": true,
+		"node": true,
+		"browser": true
+	},
 	/**
 	* "off" 或 0 - 关闭规则
 	* "warn" 或 1 - 开启规则，使用警告级别的错误：warn (不会导致程序退出),
@@ -13,7 +18,7 @@
 		"no-catch-shadow": 2, //禁止catch子句参数与外部作用域变量同名
 		"no-class-assign": 2, //禁止给类赋值
 		"no-cond-assign": 2, //禁止在条件表达式中使用赋值语句
-		"no-console": 2, //禁止使用console
+		"no-console": 0, //禁止使用console
 		"no-const-assign": 2, //禁止修改const声明的变量
 		"no-constant-condition": 2, //禁止在条件中使用常量表达式 if(true) if(1)
 		"no-continue": 0, //禁止使用continue
@@ -85,7 +90,7 @@
 		"no-obj-calls": 2, //不能调用内置的全局对象，比如Math() JSON()
 		"no-octal": 2, //禁止使用八进制数字
 		"no-octal-escape": 2, //禁止使用八进制转义序列
-		"no-param-reassign": 2, //禁止给参数重新赋值
+		"no-param-reassign": 0, //禁止给参数重新赋值
 		"no-path-concat": 0, //node中不能使用__dirname或__filename做路径拼接
 		"no-plusplus": 0, //禁止使用++，--
 		"no-process-env": 0, //禁止使用process.env
@@ -151,7 +156,7 @@
 			"1tbs"
 		], //大括号风格
 		"callback-return": 1, //避免多次调用回调什么的
-		"camelcase": 2, //强制驼峰法命名
+		"camelcase": 0, //强制驼峰法命名
 		"comma-dangle": [
 			2,
 			"never"
@@ -175,10 +180,7 @@
 			"that"
 		], //this别名
 		"constructor-super": 0, //非派生类不能调用super，派生类必须调用super
-		"curly": [
-			2,
-			"all"
-		], //必须使用 if(){} 中的{}
+		"curly": 0, //必须使用 if(){} 中的{}
 		"default-case": 2, //switch语句最后必须有default
 		"dot-location": 0, //对象访问符的位置，换行的时候在行首还是行尾
 		"dot-notation": [
@@ -198,10 +200,7 @@
 		"guard-for-in": 0, //for in循环要用if语句过滤
 		"handle-callback-err": 0, //nodejs 处理错误
 		"id-length": 0, //变量名长度
-		"indent": [
-			2,
-			4
-		], //缩进风格
+		"indent": 0, //缩进风格
 		"init-declarations": 0, //声明时必须赋初值
 		"key-spacing": [
 			0,
@@ -258,7 +257,7 @@
 			"single"
 		], //引号类型 `` "" ''
 		"quote-props": [
-			2,
+			0,
 			"always"
 		], //对象字面量中的属性名是否强制双引号
 		"radix": 2, //parseInt必须指定第二个参数
