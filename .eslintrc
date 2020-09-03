@@ -239,7 +239,7 @@
 			"never"
 		], //大括号内是否允许不必要的空格
 		"object-shorthand": 0, //强制对象字面量缩写语法
-		"one-var": 1, //连续声明
+		"one-var": 0, //连续声明
 		"operator-assignment": [
 			0,
 			"always"
