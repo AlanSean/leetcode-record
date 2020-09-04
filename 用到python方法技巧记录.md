@@ -14,3 +14,6 @@
  ![关键字](https://images2018.cnblogs.com/blog/1271484/201809/1271484-20180912105808480-1229914964.png)
 
 #### 十进制计算四舍五入用标准库 Decimal
+
+
+#### python里没有三元运算符 用 a = b  if not b else c 来表达
