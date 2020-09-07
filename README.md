@@ -2,20 +2,20 @@
 * [数组](#数组)
 * [链表](#链表)
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+# 现有功能
 
-### 数组
-* [两数之和](https://github.com/AlanSean/leetcode-record/blob/master/数组/两数之和.md)
-* [删除排序数组中的重复项](https://github.com/AlanSean/leetcode-record/blob/master/数组/删除排序数组中的重复项.md)
-* [移除元素](https://github.com/AlanSean/leetcode-record/blob/master/数组/移除元素.md)
+   运行命令 `npm run rootc` 会根据 html的title,body标签进行生成markdown的文件名和说明
 
-<br>
+   1. html的title 根据/来划分目录
 
-### 链表
-* [宝石与石头](https://github.com/AlanSean/leetcode-record/blob/master/链表/237.删除链表中的节点.md)
+    比如:链表/19.23423 会在本地生成
+
+    链表
+    |-------19.23423
+    |----------index.md 根据test文件夹下html的title和body生成内容
+    |----------index.js 复制的test文件夹下的js文件
+    |----------index.py 复制的test文件夹下的py文件
+
+### 未来功能
+    
+    有空会用node开发自动生成目录和把`js py`文件的代码写入markdown的功能
