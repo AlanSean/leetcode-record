@@ -1,29 +1,24 @@
 var fs = require('fs'),
-    npm_config_argv = JSON.parse(process.env.npm_config_argv),
-    command = {
-        run: npm_config_argv.original[1],
-        runPath: process.cwd() //运行目录
-    },
+    {resolve} = require('path'),
+    npm_config_argv = process.env.npm_config_argv && JSON.parse(process.env.npm_config_argv),
+    mdData = fs.readFileSync(resolve(__dirname,'../test/index.html'),'utf8'),
     {
         mkdir,
-        writeFile
-    } = require('./factory');
-
-//获取命令参数
-npm_config_argv.original.forEach((item, index) => {
-    switch (item) {
-        case '-n': //文件名称
-            command.mkdir = npm_config_argv.original[index + 1];
-            break;
-        default:
-    }
-});
+        writeFile,
+        copyFile,
+        getText
+    } = require('./factory'),
+    command = {
+        run: npm_config_argv.original[1],
+        runPath: process.cwd(), //运行目录
+        mkdir: getText(mdData,'title')
+    };
 
 
 //创建目录
-mkdir(command.mkdir).then( res => {
+mkdir(command.mkdir).then(res => {
     //创建文件
-    writeFile(res+'/index.js');
-    writeFile(res+'/index.md');
-    writeFile(res+'/index.py','#!/usr/bin/env python');
+    writeFile(res + '/index.md',getText(mdData,'body'));
+    copyFile(resolve(__dirname,'../test/index.js'),res + '/index.js');
+    copyFile(resolve(__dirname,'../test/index.py'),res + '/index.py');
 });
