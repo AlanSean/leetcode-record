@@ -5,8 +5,10 @@ browserSync = require('browser-sync').create();
 gulp.task('browserSync',function(){
     browserSync.init({
         server: {
-            baseDir: './'
+            baseDir: './test'
         }
     });
+    gulp.watch('test/*.*').on('change', browserSync.reload);
 });
+
 gulp.task('default',gulp.series('browserSync'));
