@@ -6,8 +6,9 @@
     },
     "exclude": [
         "node_modules",
-        "tslint-config-prettier",
-        "./index.js",
+        "node",
+        "test/index.js",
+        "自研的业务算法/index.js",
         "./gulpfile.js"
     ]
 }

@@ -119,7 +119,7 @@
 		"no-underscore-dangle": 1, //标识符不能以_开头或结尾
 		"no-unneeded-ternary": 2, //禁止不必要的嵌套 var isYes = answer === 1 ? true : false;
 		"no-unreachable": 2, //不能有无法执行的代码
-		"no-unused-expressions": 2, //禁止无用的表达式
+		"no-unused-expressions": 0, //禁止无用的表达式
 		"no-unused-vars": [
 			0,
 			{
