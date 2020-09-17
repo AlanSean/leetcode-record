@@ -305,7 +305,7 @@
 		"use-isnan": 2, //禁止比较时使用NaN，只能用isNaN()
 		"valid-jsdoc": 0, //jsdoc规则
 		"valid-typeof": 2, //必须使用合法的typeof的值
-		"vars-on-top": 1, //var必须放在作用域顶部
+		"vars-on-top": 0, //var必须放在作用域顶部
 		"wrap-iife": [
 			2,
 			"inside"
