@@ -36,32 +36,30 @@ class Solution:
             lista = lista.next
         
         return newHead.next
-    def copyRandomList(self, head: 'Node') -> 'Node':
-        lista,newHead = head,Node(-1)
+    def copyRandomList1(self, head: 'Node') -> 'Node':
+        lista,newHead,index,obj = head,Node(-1),0,{}
+        nlist = newHead
 
         while lista:
-            tem = lista.next
-            node = Node(lista.val)
-            node.next = lista.next
-            lista.next = node
-            lista = tem
-        
-        lista = head
-
-        while lista:
+            random = None
             if lista.random:
-                lista.next.random = lista.random.next
-            lista = lista.next.next
-
-        lista = head
-        node = newHead
-
-        while lista:
-            node.next = lista.next
-            node = node.next
-            lista.next = node.next
+                k,i = head,0
+                while k:
+                    if lista.random == k:
+                        random = i
+                        break
+                    k = k.next
+                    i+=1
+            nlist.next = Node(lista.val,None,random)
+            nlist = nlist.next
+            obj[index] = nlist
+            index+=1
             lista = lista.next
-        
+        nlist = newHead.next
+        while nlist:
+            if nlist.random != None:
+                nlist.random = obj[nlist.random]
+            nlist = nlist.next
         return newHead.next
 
 #生成题的链表
