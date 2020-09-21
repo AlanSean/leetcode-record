@@ -7,7 +7,7 @@
     "exclude": [
         "node_modules",
         "node",
-        "test/index.js",
+        "test/*",
         "自研的业务算法/index.js",
         "./gulpfile.js"
     ]

@@ -17,3 +17,11 @@
 
 
 #### python里没有三元运算符 用 a = b  if not b else c 来表达
+
+
+### 数组list
+
+```
+1.末尾添加元素 append
+  list.append(element)
+```
