@@ -12,24 +12,25 @@ class TreeNode:
 class Solution:
     def forwards(self, root: TreeNode, list: [int]):
         if not root: return
-        list.append(root.val)
         self.forwards(root.left, list)
+        list.append(root.val)
         self.forwards(root.right, list)
 
-    def preorderTraversal1(self, root: TreeNode) -> List[int]:
+    def preorderTraversal(self, root: TreeNode) -> List[int]:
         list = []
         self.forwards(root, list)
         print(list)
         return list
-    def preorderTraversal(self, root: TreeNode) -> List[int]:
+    def preorderTraversal1(self, root: TreeNode) -> List[int]:
         stack,list = [],[]
-        if root: stack.append(root)
-        while stack:
-            curNode = stack.pop()
-            if curNode:  
-                list.append(curNode.val)
-                stack.append(curNode.right)
-                stack.append(curNode.left)
+        
+        while root or len(stack):
+            while root:
+                stack.append(root)
+                root = root.left
+            root = stack.pop()
+            list.append(root.val)
+            root = root.right
         return list
  
 
